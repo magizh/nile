@@ -1,0 +1,28 @@
+<div class="content_pos" style="font-size:20px;width:800px;height:800px">
+<div class="row">
+  <div class="span3">
+    <h1>Comapnies</h1>
+    <ul>
+    <% @companies.each do |company|%>
+    <li><a href="<%= company_path(company)%>"> <%= company.name %></a></li>
+    <% end %>
+  </ul>
+  </div>
+  <div class="span3">
+    <h1>Causes</h1>
+    <ul>
+    <% @causes.each do |cause|%>
+    <li><a href="<%= cause_path(cause.id)%>"><%= cause.name %></a></li>
+    <% end %>
+  </ul>
+  </div>
+  <div class="span3">
+    <h1>Organizations</h1>
+    <ul>
+    <% @organizations.each do |organization|%>
+     <li><a href="<%= organization_path(organization.id)%>"> <%=organization.name %></a></li>
+    <% end %>
+  </ul>
+  </div>
+</div>
+</div>

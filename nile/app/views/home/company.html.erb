@@ -1,0 +1,20 @@
+<div class="content_pos" style="font-size:20px;width:800px;height:800px">
+   <h1><%= @company.name %></h1>
+   <img src='<%= @company.url %>'> 
+   <p>
+    Net profit = <%= @company.profit %>
+    Net ratio = <%= @company.ratio %>
+   </p>
+   <h2> Causes they support </h2>
+   <ul>
+   <% @causes.each do |cause| %>
+    <li><%= cause.name%></li>
+   <% end %>
+ </ul>
+ <h2> Organizations they donate to  </h2>
+   <ul>
+   <% @orgs.each do |org| %>
+    <li><%= org.name%></li>
+   <% end %>
+ </ul>
+</div>
